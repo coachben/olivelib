@@ -1,0 +1,33 @@
+.title {
+    -fx-font-size: 24pt;
+    -fx-font-color:"olive";
+}
+
+.label{
+    -fx-font-color:"olive";
+}
+
+.button{
+    -fx-background-color: linear-gradient(olive,olive);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-padding: 3 6 6 6;
+}
+
+.button:hover{
+    -fx-background-color: linear-gradient(olive,black);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
