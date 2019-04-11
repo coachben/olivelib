@@ -1,3 +1,4 @@
+/*
 .root {
 	-fx-body-color : #F5F5F5;
 	-fx-outer-border : #cecece;
@@ -71,8 +72,12 @@
 	-fx-min-width: 80;
 }
 
-/*positions*/
-/*first*/
+*/
+/*positions*//*
+
+*/
+/*first*//*
+
 .button.first, .menu-button.first, .toggle-button.first, .text-field.first, .text-area.first {
 	-fx-border-radius: 4 0 0 4;
 	-fx-background-radius: 4 0 0 4;
@@ -101,13 +106,17 @@ VBox > .split-menu-button.first > .arrow-button {
 	-fx-border-radius: 0 4 0 0;
 	-fx-background-radius: 0 3 0 0;
 }
-/*middle*/
+*/
+/*middle*//*
+
 .middle {
 	-fx-border-radius: 0;
 	-fx-background-radius: 0;
 }
 
-/*last*/
+*/
+/*last*//*
+
 .split-menu-button.middle > .label, .split-menu-button.last > .label {
 	-fx-border-radius: 0;
 	-fx-background-radius: 0;
@@ -146,11 +155,17 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-radius: 0 0 3 0;
 }
 
-/*button styles*/
+*/
+/*button styles*//*
 
-/*default button settings*/
 
-/*bgcolor setting*/
+*/
+/*default button settings*//*
+
+
+*/
+/*bgcolor setting*//*
+
 .color-picker,.date-picker > .arrow-button,
 .number-button,.left-arrow-button,.right-arrow-button,
 .button,.split-menu-button,.toggle-button,.menu-button,
@@ -165,18 +180,24 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-border-color: #cccccc;
 	-fx-text-fill: #333333;
 }
-	/*just for the special split menu button*/
+	*/
+/*just for the special split menu button*//*
+
 .split-menu-button > .label {
 	-fx-border-width: 1 0 1 1;
 }
-	/*for date picker arrow button*/
+	*/
+/*for date picker arrow button*//*
+
 .date-picker > .arrow-button {
 	-fx-border-radius: 0 4 4 0;
 }
 .combo-box > .arrow-button, .choice-box > .arrow-button {
 	-fx-border-width: 0;
 }
-	/*hover state*/
+	*/
+/*hover state*//*
+
 .color-picker:hover,
 .date-picker:hover > .arrow-button,
 .combo-box:hover,.choice-box:hover,
@@ -187,7 +208,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-color: #e6e6e6;
 	-fx-border-color: #acacac;
 }
-	/*pressed selected*/
+	*/
+/*pressed selected*//*
+
 .color-picker:pressed,.color-picker:selected,
 .number-button:pressed,.number-button:selected,
 .date-picker:pressed > .arrow-button,
@@ -204,7 +227,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-effect: innershadow(gaussian, #adadad, 10, 0, 0, 3);
 }
 
-	/*primary*/
+	*/
+/*primary*//*
+
 
 .button.primary,.split-menu-button.primary,.toggle-button.primary,.menu-button.primary,
 .split-menu-button.primary > .label, .split-menu-button.primary > .arrow-button {
@@ -216,13 +241,17 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-border-color: #2e6da4;
 	-fx-text-fill: white;
 }
-/*hover state*/
+*/
+/*hover state*//*
+
 .button.primary:hover,.menu-button.primary:hover,.toggle-button.primary:hover,
 .split-menu-button.primary > .label:hover, .split-menu-button.primary > .arrow-button:hover {
 	-fx-border-color: #204d74;
 	-fx-background-color: #286090;
 }
-/*pressed selected*/
+*/
+/*pressed selected*//*
+
 .button.primary:pressed, .button.primary:selected,
 .menu-button.primary:pressed,.menu-button.primary:selected
 ,.toggle-button.primary:pressed,.toggle-button.primary:selected,
@@ -232,7 +261,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-effect: innershadow(gaussian, #204d74, 10, 0, 0, 3);
 }
 
-/*success*/
+*/
+/*success*//*
+
 
 .button.success,.split-menu-button.success,.toggle-button.success,.menu-button.success,
 .split-menu-button.success > .label, .split-menu-button.success > .arrow-button {
@@ -244,13 +275,17 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-border-color: #4cae4c;
 	-fx-text-fill: white;
 }
-/*hover state*/
+*/
+/*hover state*//*
+
 .button.success:hover,.menu-button.success:hover,.toggle-button.success:hover,
 .split-menu-button.success > .label:hover, .split-menu-button.success > .arrow-button:hover {
 	-fx-border-color: #398439;
 	-fx-background-color: #449d44;
 }
-/*pressed selected*/
+*/
+/*pressed selected*//*
+
 .button.success:pressed, .button.success:selected,
 .menu-button.success:pressed,.menu-button.success:selected
 ,.toggle-button.success:pressed,.toggle-button.success:selected,
@@ -260,7 +295,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-effect: innershadow(gaussian, #398439, 10, 0, 0, 3);
 }
 
-/*info*/
+*/
+/*info*//*
+
 
 .button.info,.split-menu-button.info,.toggle-button.info,.menu-button.info,
 .split-menu-button.info > .label, .split-menu-button.info > .arrow-button {
@@ -272,13 +309,17 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-border-color: #46b8da;
 	-fx-text-fill: white;
 }
-/*hover state*/
+*/
+/*hover state*//*
+
 .button.info:hover,.menu-button.info:hover,.toggle-button.info:hover,
 .split-menu-button.info > .label:hover, .split-menu-button.info > .arrow-button:hover {
 	-fx-border-color: #269abc;
 	-fx-background-color: #31b0d5;
 }
-/*pressed selected*/
+*/
+/*pressed selected*//*
+
 .button.info:pressed, .button.info:selected,
 .menu-button.info:pressed,.menu-button.info:selected
 ,.toggle-button.info:pressed,.toggle-button.info:selected,
@@ -288,7 +329,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-effect: innershadow(gaussian, #269abc, 10, 0, 0, 3);
 }
 
-/*warning*/
+*/
+/*warning*//*
+
 
 .button.warning,.split-menu-button.warning,.toggle-button.warning,.menu-button.warning,
 .split-menu-button.warning > .label, .split-menu-button.warning > .arrow-button {
@@ -300,13 +343,17 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-border-color: #eea236;
 	-fx-text-fill: white;
 }
-/*hover state*/
+*/
+/*hover state*//*
+
 .button.warning:hover,.menu-button.warning:hover,.toggle-button.warning:hover,
 .split-menu-button.warning > .label:hover, .split-menu-button.warning > .arrow-button:hover {
 	-fx-border-color: #d58512;
 	-fx-background-color: #ec971f;
 }
-/*pressed selected*/
+*/
+/*pressed selected*//*
+
 .button.warning:pressed, .button.warning:selected,
 .menu-button.warning:pressed,.menu-button.warning:selected
 ,.toggle-button.warning:pressed,.toggle-button.warning:selected,
@@ -316,7 +363,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-effect: innershadow(gaussian, #d58512, 10, 0, 0, 3);
 }
 
-/*danger*/
+*/
+/*danger*//*
+
 
 .button.danger,.split-menu-button.danger,.toggle-button.danger,.menu-button.danger,
 .split-menu-button.danger > .label, .split-menu-button.danger > .arrow-button {
@@ -328,13 +377,17 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-border-color: #d43f3a;
 	-fx-text-fill: white;
 }
-/*hover state*/
+*/
+/*hover state*//*
+
 .button.danger:hover,.menu-button.danger:hover,.toggle-button.danger:hover,
 .split-menu-button.danger > .label:hover, .split-menu-button.danger > .arrow-button:hover {
 	-fx-border-color: #ac2925;
 	-fx-background-color: #c9302c;
 }
-/*pressed selected*/
+*/
+/*pressed selected*//*
+
 .button.danger:pressed, .button.danger:selected,
 .menu-button.danger:pressed,.menu-button.danger:selected
 ,.toggle-button.danger:pressed,.toggle-button.danger:selected,
@@ -648,7 +701,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-border-radius: 4px;
 	-fx-border-color: #C0C0C0;
 	-fx-background-insets: 0;
-	-fx-padding: 0.667em 0.75em 0.667em 0.75em; /* 10px */
+	-fx-padding: 0.667em 0.75em 0.667em 0.75em; */
+/* 10px *//*
+
 	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0.0, 0, 3);
 	-fx-font-size: 0.85em;
 }
@@ -684,7 +739,9 @@ VBox > .split-menu-button.last > .arrow-button {
 .titled-pane > .title {
 	-fx-background-color: #f5f5f5;
 	-fx-border-color: #dddddd;
-	/*-fx-background-insets: 5, 1, 5;*/
+	*/
+/*-fx-background-insets: 5, 1, 5;*//*
+
 	-fx-background-radius: 3 3 0 0, 2 2 0 0, 1 1 0 0;
 	-fx-border-radius: 3 3 0 0, 2 2 0 0, 1 1 0 0;
 	-fx-padding: 11
@@ -695,7 +752,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-radius: 0 0 4 4;
 	-fx-border-radius: 0 0 4 4;
 	-fx-border-color: #dddddd;
-	/*-fx-padding: -11;*/
+	*/
+/*-fx-padding: -11;*//*
+
 }
 
 .titled-pane.primary {
@@ -776,11 +835,15 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-border-radius: 0;
 }
 
-.tool-bar:vertical { /* left */
+.tool-bar:vertical { */
+/* left *//*
+
 	-fx-border-color: transparent #dddddd transparent transparent;
 }
 
-.tool-bar { /* top */
+.tool-bar { */
+/* top *//*
+
 	-fx-background-color: white;
 	-fx-border-color: transparent transparent #dddddd transparent;
 }
@@ -789,7 +852,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-insets: 0, 0 1 0 0;
 }
 
-/*table view columns*/
+*/
+/*table view columns*//*
+
 .filler,.column-header,.show-hide-columns-button {
 	-fx-background-color: #dddddd, white, white;
 }
@@ -808,7 +873,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-color: #2fb254;
 }
 
-/*split pane*/
+*/
+/*split pane*//*
+
 .split-pane > .split-pane-divider {
 	-fx-background-color: white;
 	-fx-border-color: #eeeeee;
@@ -818,7 +885,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-insets: 0, 0 1 0 1;
 	-fx-border-width: 0 1 0 1;
 }
-/* vertical the two nodes are placed on top of each other. */
+*/
+/* vertical the two nodes are placed on top of each other. *//*
+
 .split-pane:vertical > .split-pane-divider {
 	-fx-background-insets: 0, 1 0 1 0;
 	-fx-border-width: 1 0 1 0;
@@ -827,14 +896,18 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-color: #E0E0E0;
 }
 
+*/
 /*******************************************************************************
  *                                                                             *
  * CheckBox                                                                    *
  *                                                                             *
- ******************************************************************************/
+ ******************************************************************************//*
+
 .check-box > .box {
 	-fx-background-radius: 3;
-	/*-fx-padding: 0.166667em 0.166667em 0.25em 0.25em; !* 2 2 3 3 *!*/
+	*/
+/*-fx-padding: 0.166667em 0.166667em 0.25em 0.25em; !* 2 2 3 3 *!*//*
+
 	-fx-padding:0;
 	-fx-border-color: #56c0e0;
 	-fx-border-radius: 3;
@@ -842,12 +915,16 @@ VBox > .split-menu-button.last > .arrow-button {
 }
 .check-box > .box > .mark {
 	-fx-background-color: null;
-	-fx-padding: 0.416667em 0.416667em 0.5em 0.5em; /* 5 5 6 6 */
+	-fx-padding: 0.416667em 0.416667em 0.5em 0.5em; */
+/* 5 5 6 6 *//*
+
 	-fx-shape: "M927.936 272.992l-68.288-68.288c-12.608-12.576-32.96-12.576-45.536 0l-409.44 409.44-194.752-196.16c-12.576-12.576-32.928-12.576-45.536 0l-68.288 68.288c-12.576 12.608-12.576 32.96 0 45.536l285.568 287.488c12.576 12.576 32.96 12.576 45.536 0l500.736-500.768c12.576-12.544 12.576-32.96 0-45.536z";
 	-fx-background-insets: -3 -3 1 0;
 }
 .check-box {
-	-fx-label-padding: 0.2em 0.0em 0.3em 0.416667em; /* 0 0 0 5 */
+	-fx-label-padding: 0.2em 0.0em 0.3em 0.416667em; */
+/* 0 0 0 5 *//*
+
 	-fx-text-fill: -fx-text-background-color;
 	-fx-padding: 0 0 2 0;
 }
@@ -858,14 +935,18 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-color: linear-gradient(to bottom, #56c0e0, #40b8dc);
 }
 
+*/
 /*******************************************************************************
  *                                                                             *
  * RadioButton                                                                 *
  *                                                                             *
- ******************************************************************************/
+ ******************************************************************************//*
+
 
 .radio-button {
-	-fx-label-padding: 0.0em 0.0em 0.1em 0.416667em; /* 0 0 0 5 */
+	-fx-label-padding: 0.0em 0.0em 0.1em 0.416667em; */
+/* 0 0 0 5 *//*
+
 	-fx-text-fill: -fx-text-background-color;
 	-fx-padding: 0 0 .5 0;
 }
@@ -873,14 +954,20 @@ VBox > .split-menu-button.last > .arrow-button {
 .radio-button:focused > .radio  {
 	-fx-border-color: #56c0e0;
 	-fx-border-radius: 1em;
-	-fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+	-fx-background-radius: 1.0em; */
+/* large value to make sure this remains circular *//*
+
 	-fx-padding: 1 2 3 2;
 	-fx-background-color: white;
 }
 .radio-button > .radio > .dot {
 	-fx-background-color: transparent;
-	-fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-	-fx-padding: 0.333333em; /* 4 -- radius of the inner black dot when selected */
+	-fx-background-radius: 1.0em; */
+/* large value to make sure this remains circular *//*
+
+	-fx-padding: 0.333333em; */
+/* 4 -- radius of the inner black dot when selected *//*
+
 	-fx-background-insets: 3 2 1 2;
 }
 .radio-button:selected > .radio,.radio-button:hover > .radio {
@@ -893,7 +980,9 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-color: #56c0e0;
 }
 
-/*common things*/
+*/
+/*common things*//*
+
 .check-box:hover > .box,
 .check-box:selected > .box,
 .radio-button:hover > .radio,
@@ -906,11 +995,13 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-color: #50c0e2;
 }
 
+*/
 /*******************************************************************************
  *                                                                             *
  * Slider                                                                      *
  *                                                                             *
- ******************************************************************************/
+ ******************************************************************************//*
+
 
 .slider .thumb {
 	-fx-background-color: #dad9da, white, #3fbadf;
@@ -928,3 +1019,4 @@ VBox > .split-menu-button.last > .arrow-button {
 .slider:vertical .track {
 	-fx-pref-width: 5;
 }
+*/

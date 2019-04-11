@@ -1,7 +1,9 @@
 package sample;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -10,7 +12,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
-public class DashboardController {
+public class DashboardController{
 
 
     @FXML
@@ -33,6 +35,10 @@ public class DashboardController {
     public TextField txtAuthor;
     @FXML
     public TextField txtShelfName;
+    @FXML
+    public JFXButton btnAdd;
+    @FXML
+    public JFXButton btnClear;
 
     ConnectionClass connClass = new ConnectionClass();
     Connection conn = connClass.connect();
@@ -40,7 +46,13 @@ public class DashboardController {
     ResultSet rs;
 
 
+
+
     public void clear(ActionEvent actionEvent) {
+        clear();
+    }
+
+    private void clear() {
         txtBookName.setText("");
         txtIsbn.setText("");
         txtEdition.setText("");
@@ -54,9 +66,48 @@ public class DashboardController {
     }
 
     public void save(ActionEvent actionEvent) {
-        dBSaveRecords();
-        lblNotify.setText("Record Saved Successfully");
+        try {
+            //Test for input validity first
+            if(isValid()){
+                dBSaveRecords();
+                lblNotify.setText("Record Saved Successfully");
+
+                Alert status = new Alert(Alert.AlertType.INFORMATION);
+                status.setContentText("Record Saved Successfully");
+                status.setTitle("Success!");
+                status.setHeaderText(null);
+                status.showAndWait();
+                //clear buttons
+                clear();
+            }
+        } catch(NumberFormatException e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setContentText(e.getMessage());
+            alert.setTitle("Wrong Format Entered");
+            alert.setHeaderText(null);
+            alert.showAndWait();
+        }
+
     }
+
+    private Boolean isValid(){
+        //Return false for all empty fields
+            if (txtBookName.getText().isEmpty() | txtShelfName.getText().isEmpty() | txtQty.getText().isEmpty() |
+                    txtPublisher.getText().isEmpty() | txtIsbn.getText().isEmpty() | txtEdition.getText().isEmpty() |
+                    txtCategory.getText().isEmpty() | txtBookId.getText().isEmpty() | txtAuthor.getText().isEmpty()) {
+
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setContentText("Please enter missing fields");
+                alert.setTitle("Required Field Error");
+                alert.setHeaderText(null);
+                alert.showAndWait();
+                return false;
+            }
+
+        return true;
+
+    }
+
 
 
     public void dBSaveRecords(){
