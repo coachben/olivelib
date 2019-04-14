@@ -3,13 +3,17 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.logging.Logger;
 
 
 public class DashboardController{
@@ -40,10 +44,10 @@ public class DashboardController{
     @FXML
     public JFXButton btnClear;
 
-    ConnectionClass connClass = new ConnectionClass();
-    Connection conn = connClass.connect();
-    PreparedStatement pstmt;
-    ResultSet rs;
+    private ConnectionClass connClass = new ConnectionClass();
+    private Connection conn = connClass.connect();
+    private PreparedStatement pstmt;
+    private ResultSet rs;
 
 
 
@@ -146,5 +150,9 @@ public class DashboardController{
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
         return dtf.format(now);
+    }
+
+    public void loadStudents(ActionEvent actionEvent) {
+
     }
 }
