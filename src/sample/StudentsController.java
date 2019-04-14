@@ -85,8 +85,8 @@ public class StudentsController {
 
     public void saveStudent(ActionEvent actionEvent) {
         try {
-            if (isValid()) {
-                //start by saving record upon validity test
+            if (isValid() && !isDuplicate()) {
+                //start by saving record upon validity test and then check duplicates
                 saveStudent();
                 //populate table
                 populateStudentsTable();
@@ -188,7 +188,7 @@ public class StudentsController {
         //Return false for all empty fields
         if (txtSurname.getText().isEmpty() | txtStudentId.getText().isEmpty() | txtResidence.getText().isEmpty() |
                 txtLastName.getText().isEmpty() | txtPhone.getText().isEmpty() | txtFirstName.getText().isEmpty() |
-                cmbClass.getItems().isEmpty() | cmbGender.getItems().isEmpty() //isRecordExisting()
+                cmbClass.getItems().isEmpty() | cmbGender.getItems().isEmpty()
         ) {
 
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -202,6 +202,44 @@ public class StudentsController {
         return true;
 
     }
+
+    private Boolean isDuplicate(){
+
+        ConnectionClass connClass = new ConnectionClass();
+        Connection conn = connClass.connect();
+
+        String duplicateQuery = "SELECT * FROM students WHERE student_id ='" + txtStudentId.getText() + "'";
+
+        try {
+                ResultSet rs;
+
+                rs = conn.createStatement().executeQuery(duplicateQuery);
+
+                if (rs.next()){
+                    Alert status = new Alert(Alert.AlertType.WARNING);
+                    status.setContentText("Student ID Already Taken");
+                    status.setTitle("Duplicate Found!");
+                    status.setHeaderText(null);
+                    status.showAndWait();
+                    return true;
+
+                }else{
+
+                    return false;
+                }
+
+            } catch (SQLException e) {
+
+            Alert status = new Alert(Alert.AlertType.ERROR);
+            status.setContentText(e.getMessage());
+            status.setTitle("Db Record Error!");
+            status.setHeaderText(null);
+            status.showAndWait();
+        }
+
+        return true;
+    }
+
 
 
 
